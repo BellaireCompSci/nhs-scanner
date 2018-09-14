@@ -7,15 +7,15 @@
 '''
 
 import csv
-import datetime
+import time
 
 STUDENT_LIST_FILE_NAME = 'student_list.csv'
-RECORD_FILE = 'attendance-{date}.csv'.format(date=datetime.datetime.today().strftime('%Y-%m-%d'))
+RECORD_FILE = 'attendance-{date}.csv'.format(date=time.strftime("%Y-%m-%d %H:%M"))
 
 def main():
     student_data = read_students()
     while True:
-        scan_student(student_data)
+        date, scanned_name, scanned_num = scan_student(student_data)
         record_student(date, scanned_name, scanned_num)
 
 
@@ -33,7 +33,7 @@ def read_students():
             # Other rows contain Name, ID of students
             else:
                 student_name = row[0]
-                student_id = row[1]
+                student_id = row[1] # Keep as string to avoid conversion errors
 
                 student_list[student_id] = student_name
 
@@ -45,15 +45,15 @@ def read_students():
 
 
 def scan_student(student_list):
-    scanned_num = int(input('Scan student ID: '))
+    scanned_num = input('Scan student ID: ')
     scanned_name = student_list[scanned_num]
-    date = datetime.datetime.today().strftime('%Y-%m-%d')
+    date = time.strftime("%Y-%m-%d %H:%M")
 
     return date, scanned_name, scanned_num
 
 
 def record_student(date, name, id_num):
-    with open(RECORD_FILE, mode='w') as employee_file:
+    with open(RECORD_FILE, mode='a') as employee_file:
         student_writer = csv.writer(employee_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
         student_writer.writerow([date, name, id_num])
