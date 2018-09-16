@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 '''
     File name: id_reader.py
     Author: Ryan Knightly (reknightly@gmail.com)
