@@ -1,10 +1,8 @@
-#!/usr/bin/env python
-
 '''
     File name: id_reader.py
     Author: Ryan Knightly (reknightly@gmail.com)
     Date created: 8/14/2018
-    Date last modified: 8/14/2018
+    Date last modified: 8/15/2018
     Python Version: 2.7
 '''
 
@@ -12,7 +10,7 @@ import csv
 import time
 
 
-STUDENT_LIST_FILE = 'student_list.csv'
+STUDENT_LIST_FILE = 'data/student_list.csv'
 ATTENDANCE_FILE = f'Attendance_{time.strftime("%Y-%m-%d_%I-%M%p")}.csv'
 
 
@@ -115,7 +113,3 @@ def record_student(date, name, id_num):
     with open(ATTENDANCE_FILE, mode='a') as file:
         student_writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         student_writer.writerow([date, name, id_num])
-
-
-if __name__ == '__main__':
-    main();
