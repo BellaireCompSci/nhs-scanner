@@ -1,11 +1,3 @@
-'''
-    File name: id_reader.py
-    Author: Ryan Knightly (reknightly@gmail.com)
-    Date created: 8/14/2018
-    Date last modified: 8/15/2018
-    Python Version: 2.7
-'''
-
 import csv
 import time
 
