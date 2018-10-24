@@ -92,13 +92,13 @@ def scan_student(all_students):
         last_name = student_data['last-name']
         first_name = student_data['first-name']
         grade = student_data['grade']
+        print(f'Welcome, {first_name} {last_name}!\n')
     else:
-        print('[WARNING] Student name not found.')
+        print('[WARNING] Student name not found.\n')
         last_name = "UNKNOWN"
         first_name = "UNKNOWN"
         grade = -1
 
-    print(f'Welcome, {first_name} {last_name}!\n')
     date = time.strftime("%Y-%m-%d_%I-%M%p")
 
     return date, last_name, first_name, grade, scanned_num
