@@ -3,7 +3,7 @@ import time
 
 
 STUDENT_LIST_FILE = 'data/NHSMasterJrsSrs.csv'
-ATTENDANCE_FILE = 'Attendance_.csv{}'.format(time.strftime("%Y-%m-%d_%I-%M%p"))
+ATTENDANCE_FILE = 'Attendance_{}.csv'.format(time.strftime("%Y-%m-%d_%I-%M%p"))
 
 
 def main():
