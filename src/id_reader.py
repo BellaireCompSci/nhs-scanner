@@ -3,7 +3,7 @@ import time
 
 
 STUDENT_LIST_FILE = 'data/NHSMasterJrsSrs.csv'
-ATTENDANCE_FILE = f'Attendance_{time.strftime("%Y-%m-%d_%I-%M%p")}.csv'
+ATTENDANCE_FILE = 'Attendance_.csv{}'.format(time.strftime("%Y-%m-%d_%I-%M%p"))
 
 
 def main():
@@ -66,7 +66,7 @@ def read_students():
 
                 # print(f'last-name: {student_lastname}, first-name: {student_firstname}, grade: {student_grade}, ID: {student_id}.') # TODO: remove
 
-    print(f'Using data for {line_count-1} students.') 
+    print('Using data for {} students.'.format(line_count-1)) 
     return all_students
 
 
@@ -92,7 +92,7 @@ def scan_student(all_students):
         last_name = student_data['last-name']
         first_name = student_data['first-name']
         grade = student_data['grade']
-        print(f'Welcome, {first_name} {last_name}!\n')
+        print('Welcome, {} {}!\n'.format(first_name, last_name))
     else:
         print('[WARNING] Student name not found.\n')
         last_name = "UNKNOWN"
