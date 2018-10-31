@@ -12,8 +12,16 @@ ID Scanner for Bellaire NHS
 # Requirements
 - Python 2.7 must be installed on the computer running this script. If it is not installed, you can install it here: https://www.python.org/downloads/release/python-2715/
 
-## Maintinence
-- The list of all student information is saved in the data folder. To update this list, ensure it has the same name and columns as the original file.
-- The student data file in the repository contains only fake data for privacy reasons. DO NOT commit student data to the repository.
+## Updating The Student List
+The list of all student information is saved in the data folder. To update this list, the new file will need the same name and columns as the original file.
+Steps to create a new CSV file:
+- Open the file in Excel, and ensure that the columns are: (Last Name, First Name, Grade, ID #)
+- Save the file as Student_List.csv
+-- Open the file in Excel
+-- Click File > Save As
+-- Enter Student_List as the file name
+-- Choose Windows Comma Separated (CSV) as the file type
+-- Choose the data/ folder as the location to save the new file (or move the csv file there after you create it)
+- NOTE: DO NOT SHARE the student data file or commit it to the repository.
 
 **For further inquiry, ask the Bellaire CS Club.**
