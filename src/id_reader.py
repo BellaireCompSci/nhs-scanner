@@ -2,7 +2,7 @@ import csv
 import time
 
 
-STUDENT_LIST_FILE = 'data/NHSMasterJrsSrs.csv'
+STUDENT_LIST_FILE = 'data/Student_List.csv'
 ATTENDANCE_FILE = 'Attendance_{}.csv'.format(time.strftime("%Y-%m-%d_%I-%M%p"))
 
 
