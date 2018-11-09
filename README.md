@@ -24,4 +24,9 @@ Steps to create a new CSV file:
 -- Choose the data/ folder as the location to save the new file (or move the csv file there after you create it)
 - NOTE: DO NOT SHARE the student data file or commit it to the repository.
 
+## Creating new .zip file on mac
+- Navigate to project folder in terminal
+- Run the following: 
+zip -r nhs-scanner.zip . -x ".*" -x "*.pyc"
+
 **For further inquiry, ask the Bellaire CS Club.**
